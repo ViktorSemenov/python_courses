@@ -26,12 +26,14 @@ def login_function(login, passwd):
     else:
         print('Логин не верный')
 
-while True:
-    print('Регистрация или Вход?')
-    if input() == 'Регистрация':
-        register(input('Введите логин'),input('Введите пароль'))
-    if input() == 'Вход':
-        login_function(input('Введите логин'), input('Введите пароль'))
 
+print('Регистрация - введите 1 или Вход - введите 2?')
+a = int(input())
+if a == 1:
+    register(input('Введите логин'),input('Введите пароль'))
+elif a == 2:
+    login_function(input('Введите логин'), input('Введите пароль'))
+else:
+    print('Введите 1 или 2')
 
 
